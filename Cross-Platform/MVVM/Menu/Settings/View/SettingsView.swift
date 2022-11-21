@@ -53,6 +53,12 @@ struct SettingsView: View {
                 }
             )
 #endif
+            .onAppear{
+                viewModel.onAppear()
+            }
+            .onDisappear{
+                viewModel.onDisappear()
+            }
             .onChange(of: viewModel.isDismiss, perform: { _ in
                 presentationMode.wrappedValue.dismiss()
             })

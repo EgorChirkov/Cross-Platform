@@ -18,16 +18,18 @@ struct PlayView: View {
             VStack {
                 
                 Text("\(viewModel.score)")
-                    .font(.largeTitle)
+                    .font(.system(size: 52))
+                    .bold()
+                    .padding(.top, 40)
                 
                 Spacer()
                 
                 Text("TAP")
-                    .font(.largeTitle)
+                    .font(.system(size: viewModel.sizeTap / 2))
                     .foregroundColor(.white)
-                    .frame(width: 90, height: 90)
+                    .frame(width: viewModel.sizeTap, height: viewModel.sizeTap)
                     .background(viewModel.isEnabled ? Color.red : Color.gray)
-                    .cornerRadius(45)
+                    .cornerRadius(viewModel.sizeTap / 2)
                     .onTapGesture {
                         if viewModel.isEnabled{
                             viewModel.onAction()
@@ -41,7 +43,7 @@ struct PlayView: View {
             }
             .padding()
             .onAppear{
-                viewModel.start()
+                viewModel.onAppear()
             }
             .navigationTitle("Play")
 #if os(iOS)

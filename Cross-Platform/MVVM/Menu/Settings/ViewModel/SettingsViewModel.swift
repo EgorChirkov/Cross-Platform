@@ -16,4 +16,14 @@ class SettingsViewModel: ObservableObject{
     @Published var playerName = "Player"
     
     var difficultyLevels: [String] = ["Easy", "Normal", "Hard"]
+    
+    func onAppear(){
+        selection = UserSettingsService.shared.valueInt(for: .difficulty)
+        playerName = UserSettingsService.shared.valueString(for: .playerName).isEmpty ? "Player" : UserSettingsService.shared.valueString(for: .playerName)
+    }
+    
+    func onDisappear(){
+        UserSettingsService.shared.save(value: selection, for: .difficulty)
+        UserSettingsService.shared.save(value: playerName, for: .playerName)
+    }
 }

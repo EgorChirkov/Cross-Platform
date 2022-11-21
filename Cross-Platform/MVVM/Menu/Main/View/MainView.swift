@@ -48,9 +48,23 @@ struct MainView: View {
 #endif
         
 #if os(macOS)
-        VStack {
-            //menu for macOS
-        }
+            TabView {
+                PlayView()
+                    .tabItem {
+                        Text("Play")
+                    }
+                
+                LeaderboardView()
+                    .tabItem {
+                        Text("Leaderboard")
+                    }
+                
+                SettingsView()
+                    .tabItem {
+                        Text("Settings")
+                    }
+            }
+            .frame(width: 300, height: 600)
 #endif
         
     }

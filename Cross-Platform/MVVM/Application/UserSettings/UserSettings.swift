@@ -10,6 +10,7 @@ import Foundation
 enum UserKey: String{
     case playerName = "playerName"
     case difficulty = "difficulty"
+    case scores = "scores"
 }
 
 class UserSettingsService{
