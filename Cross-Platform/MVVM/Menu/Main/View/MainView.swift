@@ -12,6 +12,7 @@ struct MainView: View {
     @StateObject private var viewModel: MainViewModel = .init()
     
     var body: some View {
+#if os(iOS)
         NavigationView{
             List{
                 Button {
@@ -44,6 +45,14 @@ struct MainView: View {
             })
             .navigationTitle("Main Menu")
         }
+#endif
+        
+#if os(macOS)
+        VStack {
+            //menu for macOS
+        }
+#endif
+        
     }
 }
 

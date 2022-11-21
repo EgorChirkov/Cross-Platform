@@ -13,5 +13,7 @@ class SettingsViewModel: ObservableObject{
     
     @Published var selection = 0
     
+    @Published var playerName = "Player"
+    
     var difficultyLevels: [String] = ["Easy", "Normal", "Hard"]
 }

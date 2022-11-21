@@ -16,6 +16,15 @@ struct SettingsView: View {
     var body: some View {
         NavigationView{
             VStack {
+                
+                Text("Enter player name")
+                
+                TextField("Player", text: $viewModel.playerName)
+                    .padding(4)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6).stroke().foregroundColor(Color.gray.opacity(0.5))
+                    )
+                
                 Text("Select difficulty")
                 
                 Picker("", selection: $viewModel.selection) {
@@ -26,10 +35,13 @@ struct SettingsView: View {
                     }
                 }
                 .pickerStyle(.segmented)
+                
+                Spacer()
             }
             .padding()
             
             .navigationTitle("Settings")
+#if os(iOS)
             .navigationBarItems(trailing:
                 Button {
                     viewModel.isDismiss.toggle()
@@ -40,6 +52,7 @@ struct SettingsView: View {
                         .foregroundColor(.gray).opacity(0.5)
                 }
             )
+#endif
             .onChange(of: viewModel.isDismiss, perform: { _ in
                 presentationMode.wrappedValue.dismiss()
             })

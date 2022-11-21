@@ -19,6 +19,7 @@
 		740E0DED292A7B2D005AD5BB /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E0DEC292A7B2D005AD5BB /* LeaderboardViewModel.swift */; };
 		740E0DEF292A7B75005AD5BB /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E0DEE292A7B75005AD5BB /* PlayViewModel.swift */; };
 		740E0DF3292A8D6E005AD5BB /* TimerConcurrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E0DF2292A8D6E005AD5BB /* TimerConcurrent.swift */; };
+		FCCE36DB292BA80D0054B2E6 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE36DA292BA80D0054B2E6 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		740E0DEC292A7B2D005AD5BB /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
 		740E0DEE292A7B75005AD5BB /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
 		740E0DF2292A8D6E005AD5BB /* TimerConcurrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConcurrent.swift; sourceTree = "<group>"; };
+		FCCE36DA292BA80D0054B2E6 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 		740E0DF0292A8D4A005AD5BB /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				FCCE36D9292BA7F30054B2E6 /* UserSettings */,
 				740E0DF1292A8D54005AD5BB /* Timer */,
 			);
 			path = Application;
@@ -219,6 +222,14 @@
 				740E0DF2292A8D6E005AD5BB /* TimerConcurrent.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		FCCE36D9292BA7F30054B2E6 /* UserSettings */ = {
+			isa = PBXGroup;
+			children = (
+				FCCE36DA292BA80D0054B2E6 /* UserSettings.swift */,
+			);
+			path = UserSettings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				740E0DEF292A7B75005AD5BB /* PlayViewModel.swift in Sources */,
 				740E0DED292A7B2D005AD5BB /* LeaderboardViewModel.swift in Sources */,
 				740E0DEA292A7AD2005AD5BB /* SettingsViewModel.swift in Sources */,
+				FCCE36DB292BA80D0054B2E6 /* UserSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

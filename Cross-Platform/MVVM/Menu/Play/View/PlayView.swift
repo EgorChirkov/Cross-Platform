@@ -44,6 +44,7 @@ struct PlayView: View {
                 viewModel.start()
             }
             .navigationTitle("Play")
+#if os(iOS)
             .navigationBarItems(trailing:
                 Button {
                     viewModel.isDismiss.toggle()
@@ -54,6 +55,7 @@ struct PlayView: View {
                         .foregroundColor(.gray).opacity(0.5)
                 }
             )
+#endif
             .onChange(of: viewModel.isDismiss, perform: { _ in
                 presentationMode.wrappedValue.dismiss()
             })

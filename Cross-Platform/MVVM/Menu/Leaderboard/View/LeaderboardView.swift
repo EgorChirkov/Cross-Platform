@@ -28,6 +28,7 @@ struct LeaderboardView: View {
                 viewModel.fetchResults()
             }
             .navigationTitle("Leaderboard")
+#if os(iOS)
             .navigationBarItems(trailing:
                 Button {
                     viewModel.isDismiss.toggle()
@@ -38,6 +39,7 @@ struct LeaderboardView: View {
                         .foregroundColor(.gray).opacity(0.5)
                 }
             )
+#endif
             .onChange(of: viewModel.isDismiss, perform: { _ in
                 presentationMode.wrappedValue.dismiss()
             })
